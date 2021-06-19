@@ -6,17 +6,27 @@
     <link rel="icon" type="image/png" href="imagen.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="icon" href="/img/logo.svg" type="image/svg" />
-
-<link  rel="icon"   href="imagenes/favicon.png" type="image/png" />
-    <link rel="stylesheet" href="{{ asset('CSS/login.css') }}">
-    <title> @yield('title', 'Rapidisimo') </title>
+        <title> @yield('title', 'Rapidisimo') </title>
 </head>
 <body>
-    
-    <header>
-    <a href="/"><button>Home</button></a>
-    <a href="about"><button>About us</button></a>
+<link rel="stylesheet" href="{{ asset('CSS/style-layout.css') }}">
+<header id="main-header">
+	<a id="logo-header" href="/">
+		<span class="rappi">Rappidisimo</span>
+       
+		
+        	</a> <!-- / #logo-header -->
+
+	<nav>
+		<ul>
+			<li><a href="/">Inicio</a></li>
+			<li><a href="#">Acerca de</a></li>
+			<li><a href="about">Contacto</a></li>
+		</ul>
+	</nav><!-- / nav -->
+
+</header><!-- / #main-header -->
+
     @yield('opcabe')
     </header>
 
@@ -24,8 +34,10 @@
     
 
     <footer>
+    <footer id="main-footer">
+
     <a href="">Acerca de nosotros :'B</a><br>
-    <h4>Todos los derechos resevados © </h4>
+        <h4><center>Copyright Company Name © 2021. All rights reserved.</center></h4>
 
     </footer>
 </body>
