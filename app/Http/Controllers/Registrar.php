@@ -1,29 +1,32 @@
 <?php
 
+
 namespace App\Http\Controllers;
-use App\Models\restaurant;
-use App\Models\product;
+
+use App\Models\User;
+use Illuminate\Database\Eloquent\Models;
 use Illuminate\Http\Request;
 
-class AdminCont extends Controller
+class Registrar extends Controller
 {
-    
-    
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-    
-        return view('admi', [
-            'admin' => restaurant::where('FK_IdAdmin', '1')->get()
-        ]);
+        //
     }
-    
 
     /**
+     * Show the form for creating a new resource.
+     *
      * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -32,22 +35,24 @@ class AdminCont extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
-    
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+        User::create([
+            'mail' => request('email'),
+            'Pass' => request('pass'),
+            'Name' => request('name'),
+            'Lname' => request('apellido'),
+            'Addres' => request('addres'),
+            'Phone' => request('phone'),
+        ]);
+        return view('/login');
     }
+
+
 
     public function show($id)
     {
-         
+        //
     }
 
     /**

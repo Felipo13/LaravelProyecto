@@ -44,6 +44,8 @@ const mail = document.getElementById('mail');
 
         if(entrar){
             parrafo.innerHTML = warnings;
+        }else{
+            e.currentTarget.submit();
         }
 
     

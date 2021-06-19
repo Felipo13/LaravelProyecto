@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use DB;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class UserCont extends Controller
@@ -14,11 +15,19 @@ class UserCont extends Controller
     public function index()
     {
 
-        $user = \DB::table('restaurants')->get();
+        $credentials = request()->only('mail','pass');
+
+        if(Auth::attempt($credentials)){
+        return "Validación correcta";
+        }
+        return "Ha ocurrido un error, correo y/o contraseña incorrectos";
+        
+    
+        /*$user = \DB::table('restaurants')->get();
     
             return view('user', compact('user'));
-            
-        }
+         */   
+    }
 
     /**
      * Show the form for creating a new resource.

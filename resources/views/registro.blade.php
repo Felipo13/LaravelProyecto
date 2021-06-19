@@ -6,11 +6,12 @@ Registro | Rapidisimo
 @endsection
 
 
+
 @section('conte')
     <h1><center>registro</center></h1>
 
-    <form action="{{ route('registro') }}" method="GET" id="form">
-
+    <form action="{{ route('registro.store') }}" method="POST" id="form">
+    @csrf
     <label for="mail">Email</label>
     <p><input type="email" name="email" autofocus  placeholder="Ingresa un correo" id="mail" required></p>
     

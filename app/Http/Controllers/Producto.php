@@ -1,41 +1,37 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\restaurant;
-use App\Models\product;
-use Illuminate\Http\Request;
 
-class AdminCont extends Controller
+use Illuminate\Http\Request;
+use App\Models\product;
+
+class Producto extends Controller
 {
-    
-    
-    public function index()
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index($id)
     {
-    
-        return view('admi', [
-            'admin' => restaurant::where('FK_IdAdmin', '1')->get()
+        return view('productos', [
+            'product' => product::where('FK_IdRest', $id)->get()
         ]);
     }
+
     
 
-    /**
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        return view('product.NewProduc');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
+
     public function store(Request $request)
     {
         //
-    
+    }
 
     /**
      * Display the specified resource.
@@ -43,11 +39,11 @@ class AdminCont extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    }
-
     public function show($id)
     {
-         
+        return view('product\Product', [
+            'product' => product::where('Id_Product', '=', $id)->get()
+        ]);
     }
 
     /**
