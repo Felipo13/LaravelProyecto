@@ -8,7 +8,8 @@ class Registro extends Controller
 {
     public function store(){
 
-        return "Procesando formulario brou...";
+        return "Procesando formulario brou, salu2";
+        
 
     }
 }

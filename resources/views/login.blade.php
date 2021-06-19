@@ -7,6 +7,7 @@ Inicio se sesión | Rapidisimo
 
 
 @section('conte')
+               ParteBuenavad 
 <link rel="stylesheet" href="{{ asset('CSS/estilos.css') }}">
 <link rel="stylesheet" href="{{ asset('CSS/bootstrap.min.css') }}">
 <link rel="stylesheet" href="{{ asset('CSS/sweetalert2.min.css') }}">
@@ -15,6 +16,11 @@ Inicio se sesión | Rapidisimo
         <div class="wrap-login">
             <form class="login-form validate-form" id="form" action="user" method="POST">
                 <span class="login-form-title">LOGIN</span>
+    <h1><center>Inicio de sesión</center></h1>
+
+    <form action="{{ route('usercontro') }}" method="POST" id="form">
+                    
+                    Felipo
     @csrf
         <label for="mail"></label>
         <div class="wrap-input100" data-validate = "Usuario incorrecto">

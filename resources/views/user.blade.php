@@ -15,7 +15,7 @@ Bienvenido usuario | Rapidisimo
 
 <ul>    
     @forelse ($user as $userItem)
-    <li> {{ $userItem['title'] }} </li>
+    <li> {{ $userItem->NameR }} </li>
     @empty
     <li>No hay nada alv</li>
     @endforelse

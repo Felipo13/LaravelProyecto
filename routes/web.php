@@ -19,7 +19,12 @@ Route::post('/registro', 'App\Http\Controllers\Registro@store');
 
 
 
-Route::post('/user', 'App\Http\Controllers\UserCont@index')->name('usercontrol');
+Route::get('/user', 'App\Http\Controllers\UserCont@index')->name('usercontro');
 
 
 Route::view('/about', 'about')->name("about");
+
+
+
+//Rutas para admin
+Route::get("/admin", 'App\Http\Controllers\AdminCont@index')->name('admin');

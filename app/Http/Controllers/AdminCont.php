@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\restaurant;
 use DB;
 use Illuminate\Http\Request;
 
-class UserCont extends Controller
+class AdminCont extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,12 +14,10 @@ class UserCont extends Controller
      */
     public function index()
     {
-
-        $user = \DB::table('restaurants')->get();
+        $admin = restaurant::where('FK_IdAdmin', '1')->orderBy('Id_Rest','desc')->get();
     
-            return view('user', compact('user'));
-            
-        }
+            return view('/admi', compact('admin'));
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -38,7 +37,7 @@ class UserCont extends Controller
      */
     public function store(Request $request)
     {
-        return ($request);
+        //
     }
 
     /**
