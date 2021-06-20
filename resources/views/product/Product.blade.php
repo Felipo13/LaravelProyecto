@@ -8,7 +8,7 @@ Detalles del producto
 
     @forelse ($product as $productItem)
     
-    <li>  {{ $productItem->NameP . " | " . $productItem->DescriP . " | " . $productItem->Photo . " | $" . $productItem->Price}} </li>
+    <li>  {{ $productItem->name . " | " . $productItem->descrip . " | " . $productItem->photo . " | $" . $productItem->price}} </li>
     @empty
     <li>Ah ocurrido un error al cargar los detalles</li>
     @endforelse

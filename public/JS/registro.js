@@ -16,7 +16,7 @@ const mail = document.getElementById('mail');
         parrafo.innerHTML = "";
         
         if(!regexEmail.test(mail.value)){
-            warnings +=`Debe ser un correo valido <br>`
+            warnings +=`Verifica el correo, este debe ser un correo valido <br>`
             entrar = true;
         }
 
@@ -25,18 +25,18 @@ const mail = document.getElementById('mail');
             entrar = true;
         }
 
-        if(name.value.length<3 || name.value.length >20){
-            warnings +=`Necesito tu nombre con mas de 3 caracteres y menos de 25 <br>`
+        if(name.value.length<3 || name.value.length >25){
+            warnings +=`tu(s) nombre(s) deben ser de mas de 3 caracteres y menos de 25 <br>`
             entrar = true;
         }
 
-        if(lname.value.length<4 || lname.value.length >20){
-            warnings +=`Necesito tus apellido con mas de 4 caracteres y menos de 25 <br>`
+        if(lname.value.length<4 || lname.value.length >30){
+            warnings +=`tus apellido deben ser de mas de 4 caracteres y menos de 30 <br>`
             entrar = true;
         }
 
         if(addres.value.length<20 || addres.value.length >60){
-            warnings +=`ingresa tu dirección tu dirección mas de 20 caracteres y menos de 60 <br>`
+            warnings +=`tu dirección deber ser de mas de 20 caracteres y menos de 60 <br>`
             entrar = true;
         }
 

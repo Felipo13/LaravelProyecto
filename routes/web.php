@@ -13,13 +13,15 @@ Route::view('/', 'index')->name("home");
 Route::view('/login', 'login')->name('login');
 
 
+//-----------------------Login Google------------------
+Route::get('auth/redirect', 'App\Http\Controllers\Social@redirect');
+
+Route::get('callback/google', 'App\Http\Controllers\Social@callback');
+
+
 
 Route::view('/registro', 'registro')->name('registro');
 Route::post('/registro', 'App\Http\Controllers\Registrar@store')->name('registro.store');
-
-
-
-//Route::post('/user', 'user')->name('user');
 
 
 
@@ -35,7 +37,7 @@ Route::view('/about', 'about')->name("about");
 Route::get("/admin", 'App\Http\Controllers\AdminCont@index')->name('admin.index');
 
 //crud de productos
-Route::get('/admin/{Id_Rest}', 'App\Http\Controllers\Producto@index')->name('produc.index');
-Route::get('/producto/{Id_Product}', 'App\Http\Controllers\Producto@show')->name('produc.show');
+Route::get('/admin/{idResta}', 'App\Http\Controllers\Productos@index')->name('produc.index');
+Route::get('/producto/{idProducto}', 'App\Http\Controllers\Productos@show')->name('produc.show');
 
-Route::get('/product/NewProduc', 'App\Http\Controllers\Producto@create')->name('produc.create');
+Route::get('/product/NewProduc', 'App\Http\Controllers\Productos@create')->name('produc.create');
