@@ -11,7 +11,7 @@ Menú | Productos disponibles
     
     @forelse ($product as $productItem)
     
-    <li>  <a href=" {{ route('produc.show', $productItem->Id_Product) }}">  {{ $productItem->NameP . " " . $productItem->DescriP }}</a>  </li>
+    <li>  <a href=" {{ route('produc.show', $productItem->idProducto) }}">  {{ $productItem->name . " " . $productItem->descrip }}</a>  </li>
     @empty
     <li>No hay nada alv</li>
     @endforelse

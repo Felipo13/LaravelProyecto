@@ -13,7 +13,7 @@ class AdminCont extends Controller
     {
     
         return view('admi', [
-            'admin' => restaurant::where('FK_IdAdmin', '1')->get()
+            'admin' => restaurant::where('FK_idAdm', '1')->get()
         ]);
     }
     
