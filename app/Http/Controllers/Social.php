@@ -40,8 +40,8 @@ class Social extends Controller
             }
                     
 
-            auth()->login($user);
-            return redirect()->route('usercontro');
+            //auth()->login($user);
+            return redirect()->route('usercontro')->with($user);
                    
     }
 

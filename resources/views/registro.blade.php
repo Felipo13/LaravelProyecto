@@ -8,6 +8,7 @@ Registro | Rapidisimo
 
 
 @section('conte')
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <link rel="stylesheet" href="{{ asset('CSS/estilos.css') }}">
 <link rel="stylesheet" href="{{ asset('CSS/bootstrap.min.css') }}">
 <link rel="stylesheet" href="{{ asset('CSS/sweetalert2.min.css') }}">
@@ -46,6 +47,14 @@ Registro | Rapidisimo
 <input class="input100" type="tel" name="phone" id="phone" placeholder="Ingresa tu telefono" id="phone">
 <span class="focus-efecto"></span>  </div>
 
+<div class="g-recaptcha" data-sitekey="{{ config('services.recaptcha.key') }}"> </div>
+@if(Session::has('g-recaptcha-response'))
+<p class="alert {{Session::get('alert-class' , 'alert-info')}}">
+{{Session::get('g-recaptcha-response')}}
+</p>
+@endif
+    
+
 <div class="container-login-form-btn">
                 <div class="wrap-login-form-btn">
                     <div class="login-form-bgbtn"></div>
@@ -59,11 +68,12 @@ Registro | Rapidisimo
         </form>
     </div>
 </div>    
-
+</div> 
+ 
 
 
     <script type="text/javascript" src="{{ asset('JS/registro.js') }}">
     
     </script>
-    
+   
     @endsection

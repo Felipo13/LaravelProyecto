@@ -34,7 +34,7 @@ class AdminCont extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //"npm install && npm run dev
     
 
     /**
