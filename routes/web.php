@@ -10,6 +10,7 @@ Route::get('/laravel', function () {
 
 Route::view('/', 'index')->name("home");
 
+
 Route::view('/login', 'login')->name('login');
 
 
@@ -26,7 +27,7 @@ Route::post('/registro', 'App\Http\Controllers\Registrar@store')->name('registro
 
 
 
-Route::post('/user', 'App\Http\Controllers\UserCont@index')->name('usercontro');
+Route::get('/user', 'App\Http\Controllers\UserCont@index')->name('usercontro');
 
 
 
@@ -41,3 +42,7 @@ Route::get('/admin/{idResta}', 'App\Http\Controllers\Productos@index')->name('pr
 Route::get('/producto/{idProducto}', 'App\Http\Controllers\Productos@show')->name('produc.show');
 
 Route::get('/product/NewProduc', 'App\Http\Controllers\Productos@create')->name('produc.create');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

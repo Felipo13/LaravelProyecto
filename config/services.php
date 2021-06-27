@@ -35,5 +35,9 @@ return [
         'client_secret' => 'Q_DMmgBl0c1sVA_yuQYHV8r8',
         'redirect' => 'http://127.0.0.1:8000/callback/google',
     ],
+    'recaptcha' =>[
+        'key' => env('GOOGLE_RECAPTCH_KEY'),
+        'secret' => env('GOOGLE_RECAPTCH_SECRET'),
+    ],
 
 ];
