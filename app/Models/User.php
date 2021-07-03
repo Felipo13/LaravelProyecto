@@ -9,7 +9,7 @@ use App\Models\SocialProfile;
 class user extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'email', 'password', 'google_id'];
+    protected $fillable = ['name', 'email', 'password', 'lname', 'phone', 'addres', 'google_id'];
     /*protected $fillable = ['mail', 'Pass', 'Name', 'Lname', 'Addres', 'Phone'];*/
 
 

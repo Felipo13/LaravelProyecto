@@ -14,23 +14,34 @@ class Productos extends Controller
      */
     public function index($id)
     {
+        $idR = $id;
         return view('productos', [
             'product' => producto::where('FK_IdResta', $id)->get()
-        ]);
+        ])->with('idR',$idR);
     }
 
     
 
-    public function create()
+    public function create($id)
     {
-        return view('product.NewProduc');
+        
+        return view('product.NewProduc')->with('id', $id);
     }
 
 
 
     public function store(Request $request)
     {
-        //
+        $fkRest = request('restaurante');
+
+         producto::create([
+            'name' => request('name'),
+            'descrip' => request('desc'),
+            'photo' => request('photo'),
+            'price' => request('price'),
+            'FK_IdResta' => $fkRest,
+        ]);
+        return redirect()->route('produc.create', $fkRest);
     }
 
     /**

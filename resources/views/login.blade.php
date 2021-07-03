@@ -36,11 +36,13 @@ Inicio se sesión | Rapidisimo
                     <div class="login-form-bgbtn"></div>
 <button type="submit" class="login-form-btn" value="Log In"> Ingresar </button>
 </form></div>
+<p class="warnings" id="warnings"></p>
+
 <p><a href="{{ route('registro') }}">Si no cuentas con una cuenta Registrate </a></p>
     <p>-O-</p><br>
     <p><a href=" {{ url('/auth/redirect') }} ">Google</a></p>
 
-<p class="warnings" id="warnings"></p>
+
 
             </div>
         </form>

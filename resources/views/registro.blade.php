@@ -14,9 +14,9 @@ Registro | Rapidisimo
 <link rel="stylesheet" href="{{ asset('CSS/sweetalert2.min.css') }}">
 <div class="container-login">
     <div class="wrap-login">
-<form class="login-form validate-form" action="{{ route('registro') }}" method="GET" id="form">
+<form class="login-form validate-form" action="{{ route('registro') }}" method="POST" id="form">
 <span class="login-form-title">Registro</span>
-
+@csrf
 <div class="wrap-input100" data-validate = "Usuario incorrecto">
 <label for="mail"></label>
 <input class="input100"  type="email" name="email" autofocus  placeholder="Ingresa un correo" id="mail" required>
@@ -34,7 +34,7 @@ Registro | Rapidisimo
 
 <div class="wrap-input100" data-validate = "Usuario incorrecto">
 <label for="lname"></label>
-<input class="input100"  type="text" name="apellido"  placeholder="Ingresa tus apellidos" id="lname" required>
+<input class="input100"  type="text" name="lname"  placeholder="Ingresa tus apellidos" id="lname" required>
 <span class="focus-efecto"></span>  </div>
 
 <div class="wrap-input100" data-validate = "Usuario incorrecto">
@@ -49,7 +49,7 @@ Registro | Rapidisimo
 
 <div class="g-recaptcha" data-sitekey="{{ config('services.recaptcha.key') }}"> </div>
 @if(Session::has('g-recaptcha-response'))
-<p class="alert {{Session::get('alert-class' , 'alert-info')}}">
+<p id="rcc" class="alert {{Session::get('alert-class' , 'alert-info')}}">
 {{Session::get('g-recaptcha-response')}}
 </p>
 @endif

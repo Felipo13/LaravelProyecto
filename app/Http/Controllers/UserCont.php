@@ -14,19 +14,26 @@ class UserCont extends Controller
      */
     public function index()
     {
+        /*if (!$iden) {
+            return "No llega el Correo para hacer la validacion";
+        }
+        else{
+            return $iden;
+        }*/
+        
 
+        /*
         $credentials = request()->only('mail','pass');
 
         if(Auth::attempt($credentials)){
         return "Validación correcta";
         }
         return "Ha ocurrido un error, correo y/o contraseña incorrectos";
+        */
         
+        $index = \DB::table('restaurants')->get();
     
-        /*$user = \DB::table('restaurants')->get();
-    
-            return view('user', compact('user'));
-         */   
+            return view('user', compact('index'));
     }
 
     /**
