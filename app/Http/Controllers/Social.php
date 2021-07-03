@@ -38,10 +38,10 @@ class Social extends Controller
                     'social_avatar' => $userSocial->getavatar(),
                 ]);
             }
-                    
+               $iden = $userSocial->getemail();
 
-            //auth()->login($user);
-            return redirect()->route('usercontro')->with($user);
+            auth()->login($userSocial);
+            return redirect()->route('usercontro')/*->with($iden)*/;
                    
     }
 

@@ -35,17 +35,18 @@ class Registrar extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(Request $request)
     {
+       
         User::create([
-            'mail' => request('email'),
-            'Pass' => request('pass'),
-            'Name' => request('name'),
-            'Lname' => request('apellido'),
-            'Addres' => request('addres'),
-            'Phone' => request('phone'),
+            'email' => request('email'),
+            'password' => request('pass'),
+            'name' => request('name'),
+            'lname' => request('lname'),
+            'addres' => request('addres'), 
+            'phone' => request('phone'),
         ]);
-        return view('/login');
+        return redirect()->route('login');
     }
 
 

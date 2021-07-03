@@ -21,5 +21,19 @@ Bienvenido usuario | Rapidisimo
     @endforelse
 </ul>
         
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 
     @endsection

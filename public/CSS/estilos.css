@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: Poppins-Regular;
     src: url('fuentes/poppins/Poppins-Regular.ttf'); 
   }
@@ -16,7 +16,7 @@
   @font-face {
     font-family: Poppins-SemiBold;
     src: url('fuentes/poppins/Poppins-SemiBold.ttf'); 
-  }
+  } */
   
   *{
       margin: 0px; 
@@ -26,7 +26,7 @@
   
   body, html {
       height: 100%;
-      font-family: Poppins-Regular, sans-serif;
+      font-family: 'Montserrat', sans-serif;
   }
   
   
@@ -79,7 +79,7 @@
   
   .login-form-title {
     display: block;
-    font-family: Poppins-Bold;
+    font-family: 'Comfortaa', cursive;
     font-size: 40px;
     color: #333333;
     line-height: 1.5;
@@ -95,10 +95,11 @@
     position: relative;
     border-bottom: 2px solid #adadad;
     margin-bottom: 37px;
+    font-family: 'Comfortaa', cursive;
   }
   
   .input100 {
-    font-family: Poppins-Regular;
+    font-family: 'Comfortaa', cursive;
     font-size: 15px;
     color: #555555;
     line-height: 1.2;
@@ -143,7 +144,7 @@
   }
   
   .focus-efecto::after {
-    font-family: Poppins-Regular;
+    font-family: 'Comfortaa', cursive;
     font-size: 15px;
     color: #999999;
     line-height: 1.2;
@@ -224,9 +225,9 @@
   }
   
   .login-form-btn {
-    font-family: Poppins-Medium;
+    font-family: 'Comfortaa', cursive;
     font-size: 20px;
-    color: #fff;
+    color:rgb(17, 17, 17);
     line-height: 1.2;
     text-transform: uppercase;
   

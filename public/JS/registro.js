@@ -5,6 +5,7 @@ const mail = document.getElementById('mail');
     const addres = document.getElementById('addres');
     const phone = document.getElementById('phone');
     const form = document.getElementById('form');
+    const rcc = document.getElementById('rcc');
     const parrafo = document.getElementById('warnings');
 
     form.addEventListener("submit", e=>{
@@ -39,6 +40,11 @@ const mail = document.getElementById('mail');
             warnings +=`tu dirección deber ser de mas de 20 caracteres y menos de 60 <br>`
             entrar = true;
         }
+/*
+        if(rcc.value.length == null){
+            warnings +=`tu dirección deber ser de mas de 20 caracteres y menos de 60 <br>`
+            entrar = true;
+        }*/
 
 
 

@@ -37,11 +37,16 @@ Route::view('/about', 'about')->name("about");
 //Rutas para admin;
 Route::get("/admin", 'App\Http\Controllers\AdminCont@index')->name('admin.index');
 
-//crud de productos
+//-------------------Productos--------------
 Route::get('/admin/{idResta}', 'App\Http\Controllers\Productos@index')->name('produc.index');
-Route::get('/producto/{idProducto}', 'App\Http\Controllers\Productos@show')->name('produc.show');
 
-Route::get('/product/NewProduc', 'App\Http\Controllers\Productos@create')->name('produc.create');
+Route::get('/product/NewProduc/{idR}', 'App\Http\Controllers\Productos@create')->name('produc.create');
+
+Route::post('/product/NewProduc', 'App\Http\Controllers\Productos@store')->name('produc.store');
+
+Route::get('/producto/{idProducto}', 'App\Http\Controllers\Productos@show')->name('produc.show');
+//-------------------Fin Productos--------------
+
 
 Auth::routes();
 

@@ -8,7 +8,7 @@ Menú | Productos disponibles
 
 
 <ul> 
-    
+    El Identificador del restaurante es {{$idR}}
     @forelse ($product as $productItem)
     
     <li>  <a href=" {{ route('produc.show', $productItem->idProducto) }}">  {{ $productItem->name . " " . $productItem->descrip }}</a>  </li>
@@ -16,7 +16,7 @@ Menú | Productos disponibles
     <li>No hay nada alv</li>
     @endforelse
 <br><br><br>
-    <a href="{{ route('produc.create') }}">¿Deseas agregar un nuevo producto?</a>
+    <a href="{{ route('produc.create', $idR) }}">¿Deseas agregar un nuevo producto?</a>
 
     
 
